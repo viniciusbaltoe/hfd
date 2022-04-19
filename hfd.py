@@ -1,9 +1,8 @@
-# Código para o Software HFD
 import os
 import numpy as np
 import seaborn as sns
 
-import cv2 # O import do cv2 deve ser anterior ao do plt
+import cv2 
 from yolov5.detect import run
 
 import matplotlib
@@ -31,7 +30,6 @@ def configuration():
     except: None
 
     # -=-=-=-=-= Recebe os dados das detecções =-=-=-=-=-=-=-
-    #data_path = os.getcwd() + str('/yolov5/runs/detect/labels/' + video_name.replace('.mp4', '') + '.txt')
     data_file = open(data_path, 'r')
     full_data = data_file.read().replace('\n', ' ').split(' ')
     data = list()
@@ -124,7 +122,6 @@ def detection_verify():
         alert_window.mainloop()
 
 def find_video():
-    #window.withdraw() # Isto torna oculto a janela principal
     global video_path, video_name
     video_path = dlg.askopenfilename()
     video_name = video_path.split('/')[-1]

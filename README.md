@@ -2,8 +2,7 @@
 
 ## Sobre
 
-O presente trabalho tem o objetivo de propor um software para auxílio no controle organizacionais de shoppings por meio do processamentos das imagens geradas por câmeras
-de segura. Com os dados obtidos, é possível criar mapas de calor e definir tendências de comportamento populacional em áreas comerciais.
+O presente trabalho tem o objetivo de propor um software para auxílio no controle organizacionais de shoppings por meio do processamentos das imagens geradas por câmeras de segura. Com os dados obtidos, é possível criar mapas de calor e definir tendências de comportamento populacional em áreas comerciais.
 
 ## Funcionamento
 
@@ -13,9 +12,9 @@ O esquemático da utilização do Software de detecção de fluxo de pessoas pod
 
 Como pode ser observado, o funcionamento do software para o usuário é feito de forma simples. Faz-se necessário o envio de determinado vídeo do ambiente real a ser estudado, e então após processamento do software, é retornado os dados processados e uma imagem representando o mapa de calor encontrado pelo vídeo em uma imagem.
 
-Uma vez enviado o vídeo, o software o recebe e o formata para o formato de vídeo mais apropriado. Após isso, é utilizado, por meio de um programa em python, um sistema de detecção de objetos chamado YOLO (You Only Look Once). A utilização deste sistema será feita por meio de bibliotecas python do mesmo em colaboração com outras como o numpy e OpenCV. A escolha deste se baseou na sua grande popularidade com relação aos métodos de detecção de objetos e pelo fato de que a técnica de detecção de objetos deste já foi considerada estado da arte nos últimos anos.
+Uma vez enviado o vídeo, o software o recebe e o formata para o formato de vídeo mais apropriado. Após isso, é utilizado, por meio de um programa em python, um sistema de detecção de objetos chamado [YOLO (You Only Look Once)](https://pjreddie.com/darknet/yolo/). A utilização deste sistema será feita por meio de bibliotecas python do mesmo em colaboração com outras como o numpy e [OpenCV](https://opencv.org/). A escolha deste se baseou na sua grande popularidade com relação aos métodos de detecção de objetos e pelo fato de que a técnica de detecção de objetos deste já foi considerada estado da arte nos últimos anos.
 
-Assim, utilizando o YOLOV5 (YOLO Versão 5), o processamento dos frames do vídeo é feito a partir de métricas de verificação pré configuradas, de modo a capturar de forma mais precisa possível os pontos onde são encontradas pessoas. Ressalta-se aqui que o programa não faz a identificação de pessoas e não retem qualquer frame do vídeo, de modo que nenhuma imagem seja gravada pelo software.
+Assim, utilizando o [YOLOV5](https://github.com/ultralytics/yolov5), o processamento dos frames do vídeo é feito a partir de métricas de verificação pré configuradas, de modo a capturar de forma mais precisa possível os pontos onde são encontradas pessoas. Ressalta-se aqui que o programa não faz a identificação de pessoas e não retem qualquer frame do vídeo, de modo que nenhuma imagem seja gravada pelo software.
 
 <img src="/docs/detecção.png" alt="Exemplo de detecção.">
 
